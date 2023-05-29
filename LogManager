@@ -1,0 +1,25 @@
+public class LogManager {
+    private static LogManager instance;
+    
+    // Construtor privado para evitar criação direta de instâncias
+    private LogManager() {
+        // Configurações de inicialização
+    }
+    
+    // Método estático para obter a instância única
+    public static LogManager getInstance() {
+        if (instance == null) {
+            synchronized (LogManager.class) {
+                if (instance == null) {
+                    instance = new LogManager();
+                }
+            }
+        }
+        return instance;
+    }
+    
+    // Métodos de registro de log
+    public void logMessage(String message) {
+        // Lógica para registrar a mensagem de log
+    }
+}
