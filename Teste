@@ -1,0 +1,8 @@
+LogManager logManager = LogManager.getInstance();
+logManager.logMessage("Log de teste");
+
+// ...
+LogManager logManager2 = LogManager.getInstance();
+logManager2.logMessage("Outro log de teste");
+
+// Aqui, logManager e logManager2 são a mesma instância de LogManager
